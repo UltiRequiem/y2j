@@ -1,13 +1,23 @@
-import { getFileExtension, parseFlags, yamlParse } from "./depts.js";
+import { getFileExtension, parseFlags, yamlParse,yamlStringify } from "./depts.js";
 
 async function main() {
   const { file } = parseFlags(Deno.args);
 
   const fileExtension = await getFileExtension(file);
-  const fileText = await Deno.readTextFile(file);
+  let fileText;
+
+  try {
+    fileText = await Deno.readTextFile(file);
+  } catch (_) {
+    console.log(
+      "File not found. If you are sure that the file exists, maybe `yj` was not installed with the necessary permissions?",
+    );
+    return;
+  }
 
   if (fileExtension === "json") {
-    console.log("JSON to YAML is not supported yet!");
+    const data = yamlStringify(JSON.parse(fileText))
+    console.log(data)
     return;
   }
 
