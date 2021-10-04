@@ -1,7 +1,21 @@
-import { getFileExtension, parseFlags, yamlParse,yamlStringify } from "./depts.js";
+import {
+  getFileExtension,
+  parseFlags,
+  yamlParse,
+  yamlStringify,
+} from "./depts.js";
+
+function showHelp() {
+  console.error("You have to pass a file!");
+}
 
 async function main() {
-  const { file } = parseFlags(Deno.args);
+  const { file, write, help } = parseFlags(Deno.args);
+
+  if (!file | help) {
+    showHelp();
+    return;
+  }
 
   const fileExtension = await getFileExtension(file);
   let fileText;
@@ -16,16 +30,20 @@ async function main() {
   }
 
   if (fileExtension === "json") {
-    const data = yamlStringify(JSON.parse(fileText))
-    console.log(data)
+    const data = yamlStringify(JSON.parse(fileText));
+    console.log(data);
     return;
   }
 
   if (fileExtension === "yaml" || fileExtension === "yml") {
-    const data = yamlParse(fileText);
+    const data = JSON.stringify(yamlParse(fileText), null, 2);
 
-    console.log(JSON.stringify(data, null, 2));
-    return;
+    if (write) {
+      await Deno.writeTextFile(`${file}.yaml`, data);
+      return;
+    }
+
+    console.log(data);
   }
 
   console.log(`"${fileExtension}" not supported!`);
