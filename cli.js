@@ -31,15 +31,20 @@ async function main() {
 
   if (fileExtension === "json") {
     const data = yamlStringify(JSON.parse(fileText));
+
+    if (write) {
+      await Deno.writeTextFile(`${file}.yaml`, data);
+      return;
+    }
+
     console.log(data);
-    return;
   }
 
   if (fileExtension === "yaml" || fileExtension === "yml") {
     const data = JSON.stringify(yamlParse(fileText), null, 2);
 
     if (write) {
-      await Deno.writeTextFile(`${file}.yaml`, data);
+      await Deno.writeTextFile(`${file}.json`, data);
       return;
     }
 
