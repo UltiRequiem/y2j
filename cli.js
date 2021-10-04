@@ -1,9 +1,6 @@
-import {
-  getFileExtension,
-  parseFlags,
-  yamlParse,
-  yamlStringify,
-} from "./depts.js";
+import { getFileExtension, parseFlags } from "./depts.js";
+// deno-lint-ignore no-unused-vars
+import { JSONtoYAML, ObjecToYAML, YAMLtoObject,YAMLtoJSON } from "./mod.js";
 
 function showHelp() {
   console.error("You have to pass a file!");
@@ -30,7 +27,7 @@ async function main() {
   }
 
   if (fileExtension === "json") {
-    const data = yamlStringify(JSON.parse(fileText));
+    const data = JSONtoYAML(fileText)
 
     if (write) {
       await Deno.writeTextFile(`${file}.yaml`, data);
@@ -41,7 +38,7 @@ async function main() {
   }
 
   if (fileExtension === "yaml" || fileExtension === "yml") {
-    const data = JSON.stringify(yamlParse(fileText), null, 2);
+    const data = YAMLtoJSON(fileText)
 
     if (write) {
       await Deno.writeTextFile(`${file}.json`, data);
