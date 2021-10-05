@@ -17,18 +17,24 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Install denoc
-        run: pip install denoc
+      - name: Build for Linux
+        run: deno compile --allow-read --allow-write --target x86_64-unknown-linux-gnu -o x86_64-unknown-linux-gnu cli.ts
 
-      - name: Build for all platforms
-        run: denoc cli.ts
+      - name: Build for Mac One
+        run: deno compile --allow-read --allow-write --target aarch64-apple-darwin -o aarch64-apple-darwin cli.ts
+
+      - name: Build for Mac Two
+        run: deno compile --allow-read --allow-write --target x86_64-apple-darwin -o x86_64-apple-darwin cli.ts
+
+      - name: Build for Windows
+        run: deno compile --allow-read --allow-write --target x86_64-pc-windows-msvc -o x86_64-pc-windows-msvc cli.ts
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            deno_builds/x86_64-unknown-linux-gnu
-            deno_builds/aarch64-apple-darwin 
-            deno_builds/x86_64-apple-darwin
-            deno_builds/x86_64-pc-windows-msvc.exe
+            x86_64-unknown-linux-gnu
+            aarch64-apple-darwin 
+            x86_64-apple-darwin
+            x86_64-pc-windows-msvc.exe
           token: ${{ secrets.GITHUB_TOKEN }}
