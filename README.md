@@ -28,15 +28,15 @@ deno install --allow-read --allow-write https://denopkg.com/UltiRequiem/y2j/cli.
 - [nest.land](https://x.nest.land/y2j/cli.ts):
 
 ```bash
-deno install --allow-read --allow-write https://x.nest.land/y2j/cli.ts
+deno install --allow-read --allow-write https://x.nest.land/y2j@1.0.1/mod.ts
 ```
 
 ### Usage
 
-Examples using [example.json](./example.json) and [example.yaml](./example.yaml).
+Examples using [example.json](./example.json) and
+[example.yaml](./example.yaml).
 
 ```bash
-
 $ y2j --file example.json
 menu:
   id: file
@@ -66,15 +66,15 @@ $ y2j --file example.yaml
 }
 ```
 
-If you pass the `--write` the output will not be printed.
-Instead it will be in a new file with the same name, but with other extension.
+If you pass the `--write` the output will not be printed. Instead it will be in
+a new file with the same name, but with other extension.
 
 ### Built in help
 
 If yoy don't pass any flag or you pass the `--help` flag:
 
 ```
-    y2j 1.0.0
+y2j 1.0.0
 
     Convert JSON to YAML and vice versa
 
@@ -90,7 +90,6 @@ If yoy don't pass any flag or you pass the `--help` flag:
 
     If you need more help, found a bug or want to suggest a new feature:
     github.com/UltiRequiem/y2j
-
 ```
 
 ## Usage as library

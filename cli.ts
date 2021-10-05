@@ -68,7 +68,9 @@ async function main() {
     return console.log(blue(data));
   }
 
-  console.log(red(`Files with extension "${fileExtension}" are not supported!`));
+  console.log(
+    red(`Files with extension "${fileExtension}" are not supported!`),
+  );
 }
 
 if (import.meta.main) {
