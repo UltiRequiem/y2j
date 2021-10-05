@@ -12,6 +12,28 @@ Simple CLI tool and library to convert YAML to JSON and vice versa.
 
 ## CLI Tool
 
+### Installation
+
+- [deno.land/x/y2j/cli.ts]():
+
+```bash
+deno install https://deno.land/x/y2j/cli.ts
+```
+
+- [denopkg.com/UltiRequiem/y2j/cli.ts]():
+
+```bash
+deno install denopkg.com/UltiRequiem/y2j/cli.ts
+```
+
+- [nest.land/package/y2j/cli.ts]():
+
+```bash
+deno install https://x.nest.land/y2j/cli.ts
+```
+
+Or get a binary from [releases](https://github.com/UltiRequiem/deno-clear/releases/latest).
+
 ### Built in help
 
 If yoy don't pass any flag or you pass the `--help` flag:
@@ -29,16 +51,20 @@ If yoy don't pass any flag or you pass the `--help` flag:
       --write: If you pass this flag instead of printing on the screen,
       the output will be written to a file.
 
+      --version: Prints just the version
+
     If you need more help, found a bug or want to suggest a new feature:
     github.com/UltiRequiem/y2j
 
 ```
 
-## Usage
+## Usage as library
 
 ```typescript
-
+import { JSONtoYAML, YAMLtoJSON } from "https://deno.land/x/y2j/mod.ts";
 ```
+
+Check [cli.ts](./cli.ts) or [mod_test.ts](./mod_test.ts) for more examples.
 
 ### LICENSE
 

@@ -15,6 +15,8 @@ function showHelp() {
       --write: If you pass this flag instead of printing on the screen,
       the output will be written to a file.
 
+      --version: Prints just the version
+
     If you need more help, found a bug or want to suggest a new feature:
     github.com/UltiRequiem/y2j
 `));
@@ -32,7 +34,12 @@ async function readFile(filePath: string): Promise<string> | never {
 }
 
 async function main() {
-  const { file, write, help } = parseFlags(Deno.args);
+  const { file, write, help, version } = parseFlags(Deno.args);
+
+  if (version) {
+    console.log(blue(VERSION));
+    Deno.exit();
+  }
 
   if (!file || help) {
     return showHelp();
