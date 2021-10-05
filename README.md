@@ -52,7 +52,8 @@ $ cat example.json
     }
   }
 }
-$ y2j example.json
+
+$ y2j --file example.json
 menu:
   id: file
   value: File
@@ -64,6 +65,21 @@ menu:
         onclick: OpenDoc()
       - value: Close
         onclick: CloseDoc()
+
+$ y2j --file example.yaml
+{
+  "menu": {
+    "id": "file",
+    "value": "File",
+    "popup": {
+      "menuitem": [
+        { "value": "New", "onclick": "CreateNewDoc()" },
+        { "value": "Open", "onclick": "OpenDoc()" },
+        { "value": "Close", "onclick": "CloseDoc()" }
+      ]
+    }
+  }
+}
 ```
 
 ### Built in help
