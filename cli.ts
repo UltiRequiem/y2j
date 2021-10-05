@@ -1,8 +1,19 @@
-import { getFileExtension, parseFlags } from "./depts.ts";
+import { blue, getFileExtension, parseFlags, red } from "./depts.ts";
 import { JSONtoYAML, YAMLtoJSON } from "./mod.ts";
 
 function showHelp() {
   console.error("You have to pass a file!");
+}
+
+async function readFile(filePath: string): Promise<string> | never {
+  try {
+    return await Deno.readTextFile(filePath);
+  } catch (_) {
+    console.log(red(
+      "The file does not exist or I don't have permissions to read it.",
+    ));
+    Deno.exit();
+  }
 }
 
 async function main() {
@@ -13,15 +24,7 @@ async function main() {
   }
 
   const fileExtension = await getFileExtension(file);
-  let fileText;
-
-  try {
-    fileText = await Deno.readTextFile(file);
-  } catch (_) {
-    return console.log(
-      "File not found. If you are sure that the file exists, maybe `yj` was not installed with the necessary permissions?",
-    );
-  }
+  const fileText = await readFile(file);
 
   if (fileExtension === "json") {
     const data = JSONtoYAML(fileText);
@@ -31,7 +34,7 @@ async function main() {
       return;
     }
 
-    return console.log(data);
+    return console.log(blue(data));
   }
 
   if (fileExtension === "yaml" || fileExtension === "yml") {
@@ -42,7 +45,7 @@ async function main() {
       return;
     }
 
-    return console.log(data);
+    return console.log(blue(data));
   }
 
   console.log(`Files with extension "${fileExtension}" are not supported!`);
