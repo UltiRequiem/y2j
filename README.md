@@ -28,7 +28,7 @@ deno install --allow-read --allow-write https://denopkg.com/UltiRequiem/y2j/cli.
 - [nest.land](https://x.nest.land/y2j/cli.ts):
 
 ```bash
-deno install --allow-read --allow-write https://x.nest.land/y2j@1.0.1/cli.ts
+deno install --allow-read --allow-write https://x.nest.land/y2j@1.1.1/mod.ts
 ```
 
 ### Usage
