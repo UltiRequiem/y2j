@@ -36,22 +36,9 @@ Or get a binary from [releases](https://github.com/UltiRequiem/deno-clear/releas
 
 ### Usage
 
-```bash
+Examples using [example.json](./example.json) and [example.yaml](./example.yaml).
 
-$ cat example.json
-{
-  "menu": {
-    "id": "file",
-    "value": "File",
-    "popup": {
-      "menuitem": [
-        { "value": "New", "onclick": "CreateNewDoc()" },
-        { "value": "Open", "onclick": "OpenDoc()" },
-        { "value": "Close", "onclick": "CloseDoc()" }
-      ]
-    }
-  }
-}
+```bash
 
 $ y2j --file example.json
 menu:
@@ -82,6 +69,9 @@ $ y2j --file example.yaml
 }
 ```
 
+If you pass the `--write` the output will not be printed.
+Instead it will be in a new file with the same name, but with other extension.
+
 ### Built in help
 
 If yoy don't pass any flag or you pass the `--help` flag:
@@ -110,6 +100,12 @@ If yoy don't pass any flag or you pass the `--help` flag:
 
 ```typescript
 import { JSONtoYAML, YAMLtoJSON } from "https://deno.land/x/y2j/mod.ts";
+
+const myJSON = '{"hello": "world"}';
+const myYAML = "hello: world";
+
+console.log(JSONtoYAML(myJSON));
+console.log(YAMLtoJSON(myYAML))
 ```
 
 Check [cli.ts](./cli.ts) or [mod_test.ts](./mod_test.ts) for more examples.
