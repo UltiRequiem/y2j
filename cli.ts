@@ -30,8 +30,7 @@ async function main() {
     const data = JSONtoYAML(fileText);
 
     if (write) {
-      await Deno.writeTextFile(`${file}.yaml`, data);
-      return;
+      return await Deno.writeTextFile(`${file}.yaml`, data);
     }
 
     return console.log(blue(data));
@@ -41,8 +40,7 @@ async function main() {
     const data = YAMLtoJSON(fileText);
 
     if (write) {
-      await Deno.writeTextFile(`${file}.json`, data);
-      return;
+      return await Deno.writeTextFile(`${file}.json`, data);
     }
 
     return console.log(blue(data));

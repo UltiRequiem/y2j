@@ -7,6 +7,14 @@
 
 Simple CLI tool and library to convert YAML to JSON and vice versa.
 
+## CLI Tool
+
+## Usage
+
+```typescript
+
+```
+
 ### LICENSE
 
 This project is licensed under the [MIT License](./LICENSE.md).
