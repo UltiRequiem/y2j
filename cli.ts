@@ -3,7 +3,7 @@ import { JSONtoYAML, VERSION, YAMLtoJSON } from "./mod.ts";
 
 function showHelp() {
   console.error(red(`
-    yj ${VERSION}
+    y2j ${VERSION}
 
     Convert JSON to YAML and vice versa
 
@@ -68,7 +68,7 @@ async function main() {
     return console.log(blue(data));
   }
 
-  console.log(`Files with extension "${fileExtension}" are not supported!`);
+  console.log(red(`Files with extension "${fileExtension}" are not supported!`));
 }
 
 if (import.meta.main) {

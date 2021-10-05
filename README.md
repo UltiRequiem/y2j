@@ -34,12 +34,44 @@ deno install --allow-read --allow-write https://x.nest.land/y2j/cli.ts
 
 Or get a binary from [releases](https://github.com/UltiRequiem/deno-clear/releases/latest).
 
+### Usage
+
+```bash
+
+$ cat example.json
+{
+  "menu": {
+    "id": "file",
+    "value": "File",
+    "popup": {
+      "menuitem": [
+        { "value": "New", "onclick": "CreateNewDoc()" },
+        { "value": "Open", "onclick": "OpenDoc()" },
+        { "value": "Close", "onclick": "CloseDoc()" }
+      ]
+    }
+  }
+}
+$ y2j example.json
+menu:
+  id: file
+  value: File
+  popup:
+    menuitem:
+      - value: New
+        onclick: CreateNewDoc()
+      - value: Open
+        onclick: OpenDoc()
+      - value: Close
+        onclick: CloseDoc()
+```
+
 ### Built in help
 
 If yoy don't pass any flag or you pass the `--help` flag:
 
 ```
-    yj 1.0.0
+    y2j 1.0.0
 
     Convert JSON to YAML and vice versa
 
