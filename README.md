@@ -6,7 +6,6 @@
 ![CodeQL](https://github.com/UltiRequiem/y2j/workflows/CodeQL/badge.svg)
 ![Lint](https://github.com/UltiRequiem/y2j/workflows/Lint/badge.svg)
 ![Test](https://github.com/UltiRequiem/y2j/workflows/Tests/badge.svg)
-![Compile](https://github.com/UltiRequiem/y2j/workflows/Build/badge.svg)
 
 Simple CLI tool and library to convert YAML to JSON and vice versa.
 
@@ -31,8 +30,6 @@ deno install --allow-read --allow-write https://denopkg.com/UltiRequiem/y2j/cli.
 ```bash
 deno install --allow-read --allow-write https://x.nest.land/y2j/cli.ts
 ```
-
-Or get a binary from [releases](https://github.com/UltiRequiem/deno-clear/releases/latest).
 
 ### Usage
 
@@ -105,7 +102,7 @@ const myJSON = '{"hello": "world"}';
 const myYAML = "hello: world";
 
 console.log(JSONtoYAML(myJSON));
-console.log(YAMLtoJSON(myYAML))
+console.log(YAMLtoJSON(myYAML));
 ```
 
 Check [cli.ts](./cli.ts) or [mod_test.ts](./mod_test.ts) for more examples.
