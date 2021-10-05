@@ -2,7 +2,7 @@ export {
   parse as yamlParse,
   parseAll as yamlParseAll,
   stringify as yamlStringify,
-} from "https://deno.land/std@0.109.0/encoding/yaml.ts";
+} from "https://deno.land/std@0.110.0/encoding/yaml.ts";
 
 export { parse as parseFlags } from "https://deno.land/std@0.109.0/flags/mod.ts";
 
