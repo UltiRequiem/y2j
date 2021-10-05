@@ -6,7 +6,7 @@
 ![CodeQL](https://github.com/UltiRequiem/y2j/workflows/CodeQL/badge.svg)
 ![Lint](https://github.com/UltiRequiem/y2j/workflows/Lint/badge.svg)
 ![Test](https://github.com/UltiRequiem/y2j/workflows/Tests/badge.svg)
-![Compile](https://github.com/UltiRequiem/y2j/workflows/Tests/badge.svg)
+![Compile](https://github.com/UltiRequiem/y2j/workflows/Build/badge.svg)
 
 Simple CLI tool and library to convert YAML to JSON and vice versa.
 
