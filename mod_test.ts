@@ -6,9 +6,9 @@ Deno.test("Test JSON to YAML", () => {
   // assertEquals(yaml, JSONtoYAML(JSON.stringify({ hello: "world" })));
 });
 
-Deno.test("Test YAML to JSON", () => {
+Deno.test("Test YAML to JSON", async () => {
   const json = `{
   "hello": "world"
 }`;
-  assertEquals(json, YAMLtoJSON("hello: world"));
+  assertEquals(json, await YAMLtoJSON("hello: world"));
 });
