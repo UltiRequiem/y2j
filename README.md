@@ -17,19 +17,19 @@ Simple CLI tool and library to convert YAML to JSON and vice versa.
 - [deno.land/x](https://deno.land/x/y2j/cli.ts):
 
 ```bash
-deno install https://deno.land/x/y2j/cli.ts
+deno install --allow-read --allow-write https://deno.land/x/y2j/cli.ts
 ```
 
 - [denopkg.com](https://denopkg.com/UltiRequiem/y2j/cli.ts):
 
 ```bash
-deno install https://denopkg.com/UltiRequiem/y2j/cli.ts
+deno install --allow-read --allow-write https://denopkg.com/UltiRequiem/y2j/cli.ts
 ```
 
 - [nest.land](https://x.nest.land/y2j/cli.ts):
 
 ```bash
-deno install https://x.nest.land/y2j/cli.ts
+deno install --allow-read --allow-write https://x.nest.land/y2j/cli.ts
 ```
 
 Or get a binary from [releases](https://github.com/UltiRequiem/deno-clear/releases/latest).
