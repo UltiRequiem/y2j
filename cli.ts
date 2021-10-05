@@ -1,8 +1,23 @@
 import { blue, getFileExtension, parseFlags, red } from "./depts.ts";
-import { JSONtoYAML, YAMLtoJSON } from "./mod.ts";
+import { JSONtoYAML, VERSION, YAMLtoJSON } from "./mod.ts";
 
 function showHelp() {
-  console.error("You have to pass a file!");
+  console.error(red(`
+    yj ${VERSION}
+
+    Convert JSON to YAML and vice versa
+
+    FLAGS:
+
+      --file: The file to change the format, if you pass a JSON,
+      its YAML version will be printed on the screen and vice versa.
+
+      --write: If you pass this flag instead of printing on the screen,
+      the output will be written to a file.
+
+    If you need more help, found a bug or want to suggest a new feature:
+    github.com/UltiRequiem/y2j
+`));
 }
 
 async function readFile(filePath: string): Promise<string> | never {
@@ -27,7 +42,7 @@ async function main() {
   const fileText = await readFile(file);
 
   if (fileExtension === "json") {
-    const data = JSONtoYAML(fileText);
+    const data = await JSONtoYAML(fileText);
 
     if (write) {
       return await Deno.writeTextFile(`${file}.yaml`, data);
@@ -37,7 +52,7 @@ async function main() {
   }
 
   if (fileExtension === "yaml" || fileExtension === "yml") {
-    const data = YAMLtoJSON(fileText);
+    const data = await YAMLtoJSON(fileText);
 
     if (write) {
       return await Deno.writeTextFile(`${file}.json`, data);
