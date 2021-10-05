@@ -28,6 +28,6 @@ export function YAMLtoJSON(yamlString: string): Promise<string> {
   return Promise.resolve(YAMLtoJSONSync(yamlString));
 }
 
-export const VERSION = "1.0.0";
+export const VERSION = "1.2.0";
 
 export { yamlParse as YAMLtoObject, yamlStringify as ObjecToYAML };
