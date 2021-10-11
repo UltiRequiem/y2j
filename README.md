@@ -31,6 +31,13 @@ deno install --allow-read --allow-write https://denopkg.com/UltiRequiem/y2j/cli.
 deno install --allow-read --allow-write https://x.nest.land/y2j@1.1.1/mod.ts
 ```
 
+If you dont have installed Deno but
+[Node](https://www.npmjs.com/package/@ultirequiem/y2j):
+
+```bash
+yarn global add @ultirequiem/y2j # npm i -g @ultirequiem/y2j
+```
+
 ### Usage
 
 Examples using [example.json](./example.json) and
