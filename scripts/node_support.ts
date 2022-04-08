@@ -11,5 +11,6 @@ buildPackage(
   {
     entryPoints: ["./mod.ts", { name: "y2j", path: "./y2j.ts", kind: "bin" }],
     supportCJS: false,
+    check: false,
   },
 );
