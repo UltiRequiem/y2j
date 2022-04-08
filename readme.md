@@ -33,8 +33,7 @@ Eg 👉
 
 ## Documentation
 
-Is hosted on
-[Deno Doc](https://doc.deno.land/https://deno.land/x/y2j/mod.ts) 📚
+Is hosted on [Deno Doc](https://doc.deno.land/https://deno.land/x/y2j/mod.ts) 📚
 
 ## CLI
 
