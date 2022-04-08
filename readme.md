@@ -5,6 +5,37 @@
 
 YAML to JSON and vice versa 🚀
 
+## Usage
+
+The API is the same on all this platforms ✔️
+
+### [Deno 🦕](https://deno.land/x/y2j)
+
+```javascript
+import { JSONtoYAML, YAMLtoJSON } from "https://deno.land/x/y2j/mod.ts";
+```
+
+### [Node.js 🦖](https://npmjs.com/package/@ultirequiem/y2j)
+
+```javascript
+import { JSONtoYAML, YAMLtoJSON } from "@ultirequiem/y2j";
+```
+
+### [Browser 🌐](https://developer.mozilla.org/en-US/docs/Glossary/Browser)
+
+You can use any [CDN](https://en.wikipedia.org/wiki/Content_delivery_network) 🔥
+
+Eg 👉
+[ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) ↔️
+[SkyPack](https://cdn.skypack.dev/@ultirequiem/y2j) 🆚
+[Script Tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+↔️ [JSDelivr](https://cdn.jsdelivr.net/npm/@ultirequiem/y2j)
+
+## Documentation
+
+Is hosted on
+[Deno Doc](https://doc.deno.land/https://deno.land/x/y2j/mod.ts) 📚
+
 ## CLI
 
 ### Install
