@@ -38,7 +38,7 @@ for (const file of files) {
   if (options.write) {
     await Deno.writeTextFile(
       `${file}.${ext === "json" ? "yaml" : "json"}`,
-      result
+      result,
     );
   } else {
     console.log(result);
