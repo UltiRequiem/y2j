@@ -1,5 +1,8 @@
 # Y2J
 
+[![Code Coverage](https://codecov.io/gh/ultirequiem/y2j/branch/main/graph/badge.svg)](https://codecov.io/gh/ultirequiem/y2j)
+[![Deno Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/y2j/mod.ts)
+
 YAML to JSON and vice versa 🚀
 
 ## CLI
