@@ -1,8 +1,57 @@
 # Y2J
 
-> YAML to JSON and vice versa ◀
+YAML to JSON and vice versa 🚀
 
-CLI tool and library to convert YAML to JSON and vice versa.
+## CLI
+
+### Install
+
+#### Deno 🐼
+
+```sh
+deno install https://deno.land/x/y2j/y2j.ts
+```
+
+#### Node.js 🎃
+
+```sh
+npm install -g @ultirequiem/y2j
+```
+
+### Usage
+
+```sh
+$ y2j example.json
+menu:
+  id: file
+  value: File
+  popup:
+    menuitem:
+      - value: New
+        onclick: CreateNewDoc()
+      - value: Open
+        onclick: OpenDoc()
+      - value: Close
+        onclick: CloseDoc()
+
+$ y2j example.yaml
+{
+  "menu": {
+    "id": "file",
+    "value": "File",
+    "popup": {
+      "menuitem": [
+        { "value": "New", "onclick": "CreateNewDoc()" },
+        { "value": "Open", "onclick": "OpenDoc()" },
+        { "value": "Close", "onclick": "CloseDoc()" }
+      ]
+    }
+  }
+}
+```
+
+If you pass the `--write` the output will not be printed. Instead it will be in
+a new file with the same name, but with other extension.
 
 ## Support
 
