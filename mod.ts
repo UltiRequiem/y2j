@@ -1,33 +1,12 @@
-import { yamlParse, yamlStringify } from "./depts.ts";
+import {
+  stringify,
+  parse,
+} from "https://deno.land/std@0.134.0/encoding/yaml.ts";
 
-/**
- * Receives a string with a valid JSON Object and returns a string with
- * its version in YAML. */
-export function JSONtoYAMLSync(jsonString: string): string {
-  return yamlStringify(JSON.parse(jsonString));
+export function JSONtoYAML(jsonString: string) {
+  return stringify(JSON.parse(jsonString));
 }
 
-/**
- * Receives a string with a valid JSON Object and returns a string with
- * its version in YAML. */
-export function JSONtoYAML(jsonString: string): Promise<string> {
-  return Promise.resolve(JSONtoYAMLSync(jsonString));
+export function YAMLtoJSON(yaml: string) {
+  return JSON.stringify(parse(yaml), null, 2);
 }
-
-/**
- * Receives a string with a valid YAML and returns a string with
- * its version in JSON. */
-export function YAMLtoJSONSync(yamlString: string): string {
-  return JSON.stringify(yamlParse(yamlString), null, 2);
-}
-
-/**
- * Receives a string with a valid YAML and returns a string with
- * its version in JSON. */
-export function YAMLtoJSON(yamlString: string): Promise<string> {
-  return Promise.resolve(YAMLtoJSONSync(yamlString));
-}
-
-export const VERSION = "1.2.0";
-
-export { yamlParse as YAMLtoObject, yamlStringify as ObjecToYAML };
