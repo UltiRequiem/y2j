@@ -1,4 +1,4 @@
-import { buildPackage } from "https://deno.land/x/ultirequiem@0.0.15/node_support.ts";
+import { buildPackage } from "https://deno.land/x/ultirequiem@0.0.17/node_support.ts";
 
 buildPackage(
   {
