@@ -1,5 +1,5 @@
-import { Command } from "https://deno.land/x/cliffy@v0.25.2/command/mod.ts";
-import { colors } from "https://deno.land/x/cliffy@v0.25.2/ansi/mod.ts";
+import { Command } from "https://deno.land/x/cliffy@v0.25.4/command/mod.ts";
+import { colors } from "https://deno.land/x/cliffy@v0.25.4/ansi/mod.ts";
 import { fileExtension } from "https://deno.land/x/file_extension@v2.1.0/mod.ts";
 import { JSONtoYAML, YAMLtoJSON } from "./mod.ts";
 
