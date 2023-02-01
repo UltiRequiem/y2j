@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.170.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.175.0/testing/asserts.ts";
 
 import { JSONtoYAML, YAMLtoJSON } from "./mod.ts";
 
