@@ -1,17 +1,20 @@
 # Y2J
 
-[![Code Coverage](https://codecov.io/gh/ultirequiem/y2j/branch/main/graph/badge.svg)](https://codecov.io/gh/ultirequiem/y2j)
+[![npm](https://img.shields.io/npm/v/@ultirequiem/y2j?logo=npm&color=cb3837)](https://www.npmjs.com/package/@ultirequiem/y2j)
+[![npm downloads](https://img.shields.io/npm/dm/@ultirequiem/y2j?color=cb3837)](https://www.npmjs.com/package/@ultirequiem/y2j)
+[![CI](https://github.com/UltiRequiem/y2j/actions/workflows/ci.yaml/badge.svg)](https://github.com/UltiRequiem/y2j/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/UltiRequiem/y2j/graph/badge.svg)](https://codecov.io/gh/UltiRequiem/y2j)
 
 YAML to JSON and vice versa 🚀
 
 ## Usage
 
-The API is the same on all this platforms ✔️
+The API is the same on all these platforms ✔️
 
-### [Node.js 🐢🚀](https://npmjs.com/package/y2j)
+### [Node.js 🐢🚀](https://npmjs.com/package/@ultirequiem/y2j)
 
 ```javascript
-import { JSONtoYAML, YAMLtoJSON } from "y2j";
+import { JSONtoYAML, YAMLtoJSON } from "@ultirequiem/y2j";
 ```
 
 ### [Browser 🌐](https://developer.mozilla.org/en-US/docs/Glossary/Browser)
@@ -80,12 +83,12 @@ a new file with the same name, but with other extension.
 
 ## Support
 
-Open an Issue, I will check it a soon as possible 👀
+Open an Issue, I will check it as soon as possible 👀
 
 If you want to hurry me up a bit
 [send me a tweet](https://twitter.com/UltiRequiem) 😆
 
-Don't forget to start the repo ⭐
+Don't forget to star the repo ⭐
 
 ## Versioning
 

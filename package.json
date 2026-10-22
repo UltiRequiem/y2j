@@ -1,5 +1,5 @@
 {
-  "name": "y2j",
+  "name": "@ultirequiem/y2j",
   "version": "0.0.0-development",
   "description": "",
   "type": "module",
@@ -27,10 +27,12 @@
     "build": "tsc",
     "lint": "eslint 'src/**/*.ts' && prettier --check 'src/**/*.ts'",
     "fmt": "prettier --write 'src/**/*.ts'",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",
+    "@vitest/coverage-v8": "^5.0.5",
     "eslint": "^10.13.0",
     "eslint-plugin-tsdoc": "^0.5.4",
     "eslint-plugin-unicorn": "^78.0.0",
