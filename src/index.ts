@@ -1,7 +1,4 @@
-import {
-  parse,
-  stringify,
-} from "https://deno.land/std@0.224.0/encoding/yaml.ts";
+import { parse, stringify } from "yaml";
 
 export function JSONtoYAML(jsonString: string) {
   return stringify(JSON.parse(jsonString));
