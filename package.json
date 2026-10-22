@@ -1,7 +1,7 @@
 {
   "name": "@ultirequiem/y2j",
   "version": "0.0.0-development",
-  "description": "",
+  "description": "Convert YAML to JSON and back.",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -17,7 +17,13 @@
   "engines": {
     "node": ">=20"
   },
-  "keywords": [],
+  "keywords": [
+    "yaml",
+    "json",
+    "convert",
+    "esm",
+    "typescript"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
