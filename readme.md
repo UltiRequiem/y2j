@@ -30,57 +30,6 @@ Eg 👉
 ## Documentation
 
 Types are included with the package.
-## CLI
-
-### Install
-
-#### Deno 🐼
-
-```sh
-deno install https://deno.land/x/y2j/y2j.ts
-```
-
-#### Node.js 🎃
-
-```sh
-npm install -g @ultirequiem/y2j
-```
-
-### Usage
-
-```sh
-$ y2j example.json
-menu:
-  id: file
-  value: File
-  popup:
-    menuitem:
-      - value: New
-        onclick: CreateNewDoc()
-      - value: Open
-        onclick: OpenDoc()
-      - value: Close
-        onclick: CloseDoc()
-
-$ y2j example.yaml
-{
-  "menu": {
-    "id": "file",
-    "value": "File",
-    "popup": {
-      "menuitem": [
-        { "value": "New", "onclick": "CreateNewDoc()" },
-        { "value": "Open", "onclick": "OpenDoc()" },
-        { "value": "Close", "onclick": "CloseDoc()" }
-      ]
-    }
-  }
-}
-```
-
-If you pass the `--write` the output will not be printed. Instead it will be in
-a new file with the same name, but with other extension.
-
 ## Support
 
 Open an Issue, I will check it as soon as possible 👀
