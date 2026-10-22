@@ -1,7 +1,6 @@
 # Y2J
 
 [![Code Coverage](https://codecov.io/gh/ultirequiem/y2j/branch/main/graph/badge.svg)](https://codecov.io/gh/ultirequiem/y2j)
-[![Deno Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/y2j/mod.ts)
 
 YAML to JSON and vice versa 🚀
 
@@ -9,16 +8,10 @@ YAML to JSON and vice versa 🚀
 
 The API is the same on all this platforms ✔️
 
-### [Deno 🦕](https://deno.land/x/y2j)
+### [Node.js 🐢🚀](https://npmjs.com/package/y2j)
 
 ```javascript
-import { JSONtoYAML, YAMLtoJSON } from "https://deno.land/x/y2j/mod.ts";
-```
-
-### [Node.js 🦖](https://npmjs.com/package/@ultirequiem/y2j)
-
-```javascript
-import { JSONtoYAML, YAMLtoJSON } from "@ultirequiem/y2j";
+import { JSONtoYAML, YAMLtoJSON } from "y2j";
 ```
 
 ### [Browser 🌐](https://developer.mozilla.org/en-US/docs/Glossary/Browser)
@@ -33,8 +26,7 @@ Eg 👉
 
 ## Documentation
 
-Is hosted on [Deno Doc](https://doc.deno.land/https://deno.land/x/y2j/mod.ts) 📚
-
+Types are included with the package.
 ## CLI
 
 ### Install
@@ -92,9 +84,6 @@ Open an Issue, I will check it a soon as possible 👀
 
 If you want to hurry me up a bit
 [send me a tweet](https://twitter.com/UltiRequiem) 😆
-
-Consider [supporting me on Patreon](https://patreon.com/UltiRequiem) if you like
-my work 🙏
 
 Don't forget to start the repo ⭐
 
