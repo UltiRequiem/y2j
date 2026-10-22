@@ -1,11 +1,11 @@
 # Y2J
 
+YAML to JSON and vice versa 🚀
+
 [![npm](https://img.shields.io/npm/v/@ultirequiem/y2j?logo=npm&color=cb3837)](https://www.npmjs.com/package/@ultirequiem/y2j)
 [![npm downloads](https://img.shields.io/npm/dm/@ultirequiem/y2j?color=cb3837)](https://www.npmjs.com/package/@ultirequiem/y2j)
 [![CI](https://github.com/UltiRequiem/y2j/actions/workflows/ci.yaml/badge.svg)](https://github.com/UltiRequiem/y2j/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/UltiRequiem/y2j/graph/badge.svg)](https://codecov.io/gh/UltiRequiem/y2j)
-
-YAML to JSON and vice versa 🚀
 
 ## Usage
 
