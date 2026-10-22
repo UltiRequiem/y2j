@@ -1,6 +1,6 @@
 # Y2J
 
-YAML to JSON and vice versa 🚀
+Convert YAML to JSON and back.
 
 [![npm](https://img.shields.io/npm/v/@ultirequiem/y2j?logo=npm&color=cb3837)](https://www.npmjs.com/package/@ultirequiem/y2j)
 [![npm downloads](https://img.shields.io/npm/dm/@ultirequiem/y2j?color=cb3837)](https://www.npmjs.com/package/@ultirequiem/y2j)
