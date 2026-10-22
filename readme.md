@@ -9,15 +9,12 @@ YAML to JSON and vice versa 🚀
 
 ## Usage
 
-ESM only: the same import works in Node.js, Bun and browsers.
+ESM only, types included: the same import works in Node.js, Bun and browsers.
 
 ```javascript
 import { JSONtoYAML, YAMLtoJSON } from "@ultirequiem/y2j";
 ```
 
-## Documentation
-
-Types are included with the package.
 ## Support
 
 Open an Issue, I will check it as soon as possible 👀
